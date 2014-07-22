@@ -1,0 +1,12 @@
+{
+  "name": "economy-widget",
+  "version": "0.0.1",
+  "author": "Martin Lekvall",
+  "description": "Responsive widget containing a small number of puffs",
+  "license": "MIT",
+  "homepage": "https://github.com/Malese/economy-widget",
+  "dependencies": {
+    "respond": "~1.4.2",
+    "normalize.css": "~3.0.1"
+  }
+}

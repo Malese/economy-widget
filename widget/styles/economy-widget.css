@@ -1,0 +1,29 @@
+/* ====== box-sizing ====== */
+ *, *:before, *:after   { box-sizing: border-box; }
+
+
+/* ====== media ====== */
+.media:before,
+.media:after            { content: " "; display: table; }
+
+.media:after            { clear: both; }
+
+.mediaImg               { float: left; margin-right: 12px; margin-right: 0.75rem; }
+
+.mediaBody              { display: table-cell; width: 10000px; vertical-align: top; }
+
+.mediaBody :first-child { margin-top: 0; }
+
+
+/* ====== widget ====== */
+.ecoWidget              { background-color: #FFECE6; padding: 0px 12px 8px; padding: 0rem 0.75rem 0.5rem; /* box-shadow: 1px 1px 6px rgba(0,0,0,0.2); */}
+
+.ecoWidget > .ecoHeader { margin: 0; padding: 0; }
+
+.ecoPuff                { display: block; margin-bottom: 8px; margin-bottom: 0.5rem; }
+
+.ecoPuffImg             { width: 112px; width: 7rem; }
+.ecoPuffImg > img       { width: 100%; height: auto; }
+
+.ecoPuffBody > h3       { margin: 5px 0; margin: 0.3rem 0; }
+

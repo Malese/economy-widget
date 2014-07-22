@@ -1,0 +1,18 @@
+# The .gitignore is ignored by global .gitignore,
+# but should be usefull to all in this project.
+!.gitignore
+
+# Ignore bower components. These are installed by 'bower install' upon project initialization.
+widget/bower_components
+
+# Ignore node modules. These are installed by 'npm install' upon project initialization.
+node_modules
+
+# Dont track any built resources.
+dist
+
+# Dont track ssh-credentials
+remote-hosts.json
+
+# Dont enforce sublime text workspace settings on others.
+*.sublime-workspace

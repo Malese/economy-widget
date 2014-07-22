@@ -1,0 +1,25 @@
+// Fill in your secure credentials in all server targets.
+// Add and remove servers as needed.
+// If more than one project uses this file it's convenient
+// to put one instance of this file at one place and link
+// to it from inside project folders.
+{
+  "stagewebnfs": {
+    "host": "stagewebnfs1.hd.se",
+    "username": "importhd",
+    "privateKey": "/full/path/to/private/sshkeyfile",
+    "passphrase": "keypassword-or-sshagentpassword"
+  },
+  "interact": {
+    "host": "interact.webb.hd.se",
+    "username": "importhd",
+    "privateKey": "/full/path/to/private/sshkeyfile",
+    "passphrase": "keypassword-or-sshagentpassword"
+  },
+  "testweb": {
+    "host": "testweb.hd.se",
+    "username": "escenic",
+    "privateKey": "/full/path/to/private/sshkeyfile",
+    "passphrase": "keypassword-or-sshagentpassword"
+  }
+}

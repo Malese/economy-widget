@@ -1,0 +1,23 @@
+{
+  "puff1": {
+    "image": "images/lightbulbs.png",
+    "cat": "Innovation",
+    "heading": "8 nya företag rullar ut från inkubatorn i Juli"
+  },
+  "puff2": {
+    "image": "images/forband.jpg",
+    "cat": "Börsen",
+    "heading": "Öresundsregionen surfar på den amerikanska konjukturvågen"
+  },
+  "puff3": {
+    "image": "images/kayak.jpg",
+    "cat": "Bank &amp; försäkring",
+    "heading": "Nya grepp inom utlåningssektorn skapar förvirring"
+  },
+  "hero1": {
+    "image": "images/map.png",
+    "cat": "Innovation",
+    "heading": "Här lunchar drakarna i Malmö city",
+    "subheading": "Kartläggning: Drakarna som drar till sig näringslivet"
+  }
+}
