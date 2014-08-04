@@ -5,36 +5,71 @@
 /* ====== media ====== http://jsbin.com/amarox/4/edit */
 .media:before,
 .media:after            { content: " "; display: table; }
-
 .media:after            { clear: both; }
 
 .mediaImg               { float: left; margin-right: 8px; margin-right: 0.5rem; }
 
 .mediaBody              { display: table-cell; width: 10000px; vertical-align: top; }
-
 .mediaBody :first-child { margin-top: 0; }
 
 
+/* ====== header ====== */
+.ecoHeader              { margin: 0; font-family: Georgia, "Times New Roman", Times, serif; }
+/*.ecoHeader > h2         { margin: 0; }*/
+
+.ecoHeader > h2 {
+margin: 16px 10px 5px;
+margin: 1rem 0.6rem 0.3rem;
+color: #780E81;
+text-transform: uppercase;
+font-family: "Helvetica Neue";
+font-size: 12px;
+font-size: 0.9rem;
+}
+
+
 /* ====== widget ====== */
-.ecoWidget > a          { text-decoration: none; }
-.ecoWidget > a:hover h3 { color: #666; }
-
-.ecoWidget              { background-color: #FFECE6; padding: 0px 12px 8px; padding: 0rem 0.75rem 0.5rem; /* box-shadow: 1px 1px 6px rgba(0,0,0,0.2); */}
-
-.ecoHeader              { margin: 0; padding: 8px 0 13px; padding: 0.5rem 0 0.8rem; font-family: Georgia, "Times New Roman", Times, serif; }
-.ecoHeader > h2         { margin: 0; }
-
-.ecoPuff                { display: block; margin-bottom: 8px; margin-bottom: 0.5rem; }
-
-.ecoPuffImg             { width: 112px; width: 7rem; }
-.ecoPuffImg > img,
-  .ecoPuffImgHero,
-  .ecoPuffImgHero > img { width: 100%; height: auto; }
+.ecoWidget              { background-color: #FFECE6; padding: 3px 10px 2px; padding: 0.2rem 0.6rem 0.1rem; /* box-shadow: 1px 1px 6px rgba(0,0,0,0.2); */}
+.ecoWidget > a:hover h3,
+  .ecoWidget > a:hover p{ color: #555; }
 
 
-.ecoPuffBody            { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+/* ====== puff ====== */
+.ecoPuff                { display: block; margin: 8px 0; margin: 0.5rem 0; text-decoration: none; }
 
-.ecoPuffBody > span     { display: inline-block; padding: 0.1rem 0.25rem 0.15rem; vertical-align: inherit; text-transform: uppercase; font-size: 9px; font-size: 0.55rem; color: #ddd; background-color: #555; }
+.ecoPuffImg             { width: 33%; max-width: 7rem; } /* width: 99px; width: 6.2rem; */
+.ecoPuffImg > img       { display: block; width: 100%; height: auto; }
 
-.ecoPuffBody > h3       { margin: 0; font-size: 16px; font-size: 1rem; line-height: 1.2; color: black; }
+.ecoPuffBody            { font-family: Georgia, "Times New Roman", Times, serif; }
+.ecoPuffBody > span     { display: inline-block; padding: 2px 4px 2px; padding: 0.1rem 0.25rem ; vertical-align: inherit; text-transform: uppercase; font-size: 9px; font-size: 0.55rem; color: #ddd; background-color: #555; }
+.ecoPuffBody > h3       { margin: 0; font-size: 14px; font-size: 0.9rem; line-height: 1.2; color: black; }
 
+
+/* The issue here is that EMs within media query statements actually behave like REMs, but otherwise do not.
+   By using em's in MQ's along with respond.js we need no px-unit fallback. */
+@media ( min-width: 25em )  {
+  .ecoPuffBody > h3             { font-size: 16px; font-size: 1rem; }
+}
+@media ( min-width: 30em )  {
+  .ecoPuffBody > h3             { font-size: 20px; font-size: 1.1rem; }
+  .ecoPuffBody > span           { font-size: 10px; font-size: 0.6rem; }
+}
+/* puff display side-by-side */
+@media ( min-width: 42em )  {
+  .ecoWidgetDefault h3          { font-size: 16px; font-size: 1rem; margin: 8px 2px; margin: 0.5rem 0.15rem; }
+  .ecoWidgetDefault             { padding: 10px 0 2px 10px; padding: 0.6rem 0 0.1rem 0.6rem; }
+  .ecoWidgetDefault > .ecoPuff  { display: table-cell; position: relative; vertical-align: top; padding-right: 10px; padding-right: 0.6rem; }
+  .ecoWidgetDefault > .ecoPuff > .ecoPuffImg { width: 100%; max-width: none; margin-right: 0; }
+  .ecoWidgetDefault span        { position: absolute; right: 10px; right: 0.6rem; top: 0; font-size: 13px; font-size: 0.8rem; padding: 4px 8px; padding: 0.25rem 0.4rem 0.2rem; background-color: rgba(0, 0, 0, 0.7); }
+}
+
+
+/* ====== puff hero ====== */
+.ecoPuffHero            { position: relative; border-bottom: 1px solid #E6D4CE; }
+
+.ecoPuffImgHero,
+  .ecoPuffImgHero > img { display: block; width: 100%; height: auto; }
+
+.ecoPuffBodyHero > span { position: absolute; top: 0; padding: 4px 6px 3px; padding: 0.25rem 0.4rem 0.2rem; font-size: 13px; font-size: 0.8rem; background-color: rgba(0, 0, 0, 0.7); }
+.ecoPuffBodyHero > h3   { margin-top: 6px; margin-top: 0.4rem; font-size: 24px; font-size: 1.5rem; }
+.ecoPuffBodyHero > p    { margin: 7px 0; margin: 0.4rem 0; font-size: 14px; font-size: 0.9rem; font-weight: bold; color: #780E81; }
