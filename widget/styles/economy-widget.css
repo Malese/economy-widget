@@ -2,7 +2,7 @@
  *, *:before, *:after   { box-sizing: border-box; }
 
 
-/* ====== media ====== http://jsbin.com/amarox/4/edit */
+/* ====== .media ====== http://jsbin.com/amarox/4/edit */
 .media:before,
 .media:after            { content: " "; display: table; }
 .media:after            { clear: both; }
@@ -13,31 +13,20 @@
 .mediaBody :first-child { margin-top: 0; }
 
 
-/* ====== header ====== */
-.ecoHeader              { margin: 0; font-family: Georgia, "Times New Roman", Times, serif; }
-/*.ecoHeader > h2         { margin: 0; }*/
-
-.ecoHeader > h2 {
-margin: 16px 10px 5px;
-margin: 1rem 0.6rem 0.3rem;
-color: #780E81;
-text-transform: uppercase;
-font-family: "Helvetica Neue";
-font-size: 12px;
-font-size: 0.9rem;
-}
+/* ====== .ecoHeader ====== */
+.ecoHeader > h2         { margin: 16px 10px 5px; margin: 1rem 0.6rem 0.3rem; color: #780E81; text-transform: uppercase; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; font-size: 0.9rem; }
 
 
-/* ====== widget ====== */
+/* ====== .ecoWidget ====== */
 .ecoWidget              { background-color: #FFECE6; padding: 3px 10px 2px; padding: 0.2rem 0.6rem 0.1rem; /* box-shadow: 1px 1px 6px rgba(0,0,0,0.2); */}
 .ecoWidget > a:hover h3,
   .ecoWidget > a:hover p{ color: #555; }
 
 
-/* ====== puff ====== */
+/* ====== .ecoPuff ====== */
 .ecoPuff                { display: block; margin: 8px 0; margin: 0.5rem 0; text-decoration: none; }
 
-.ecoPuffImg             { width: 33%; max-width: 7rem; } /* width: 99px; width: 6.2rem; */
+.ecoPuffImg             { width: 33%; max-width: 112px; max-width: 7rem; }
 .ecoPuffImg > img       { display: block; width: 100%; height: auto; }
 
 .ecoPuffBody            { font-family: Georgia, "Times New Roman", Times, serif; }
@@ -47,7 +36,7 @@ font-size: 0.9rem;
 
 /* The issue here is that EMs within media query statements actually behave like REMs, but otherwise do not.
    By using em's in MQ's along with respond.js we need no px-unit fallback. */
-@media ( min-width: 25em )  {
+@media ( min-width: 30em )  {
   .ecoPuffBody > h3             { font-size: 16px; font-size: 1rem; }
 }
 @media ( min-width: 30em )  {
@@ -62,9 +51,14 @@ font-size: 0.9rem;
   .ecoWidgetDefault > .ecoPuff > .ecoPuffImg { width: 100%; max-width: none; margin-right: 0; }
   .ecoWidgetDefault span        { position: absolute; right: 10px; right: 0.6rem; top: 0; font-size: 13px; font-size: 0.8rem; padding: 4px 8px; padding: 0.25rem 0.4rem 0.2rem; background-color: rgba(0, 0, 0, 0.7); }
 }
+/* puff display side-by-side */
+@media ( min-width: 52em )  {
+  .ecoWidgetDefault h3          { position: absolute; bottom: 0; background-color: #222; background-color: rgba(0, 0, 0, 0.7); margin: 0 0.6rem 0 0; color: #EEE; padding: 0.5rem; }
+  .ecoWidgetDefault > a:hover h3{ color: #ccc; }
+}
 
 
-/* ====== puff hero ====== */
+/* ====== .ecoPuffHero :: extends .ecoPuff ====== */
 .ecoPuffHero            { position: relative; border-bottom: 1px solid #E6D4CE; }
 
 .ecoPuffImgHero,
